@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="text">Hi there!</h1>
+      <h2 class="text">I'm Habiba Amr!</h2>
+      <img class="img" src="IMG_4403.jpeg" alt="picture" />
+      <h3 class="h3">
+        I'm a Comp-Sci graduate, I love reading books, adventure, coding (obv)
+      </h3>
+      <h3>Hire me.. ⬇️</h3>
+      <div class="links">
+        <a href="#" title="my linkedin" onclick="triggerConfetti(event, '//www.linkedin.com/in/habibatallahamr/')">
+          <i style="font-size: 50px; color: black;" class="fa">&#xf08c;</i>
+        </a>
+        <a href="#" title="Github" onclick="triggerConfetti(event, '//www.github.com/stemcontent')">
+          <i style="font-size: 50px; color: black;" class="fa">&#xf09b;</i>
+        </a>
+      </div>
+    </div>
+    
+    <script>
+      function triggerConfetti(event, url) {
+        event.preventDefault(); // Prevent the default link behavior
+        
+        // Trigger the confetti animation
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+
+        // Delay the redirection to allow the confetti to show
+        setTimeout(function() {
+          window.location.href = url;
+        }, 1000); // Adjust this delay as needed
+      }
+    </script>
+  </body>
+</html>
